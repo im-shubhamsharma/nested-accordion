@@ -1,0 +1,17 @@
+.accordion {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+button {
+  padding: 0 0.5rem;
+  border: none;
+}
