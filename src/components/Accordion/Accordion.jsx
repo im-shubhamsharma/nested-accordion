@@ -8,14 +8,14 @@ const Accordion = (props) => {
 
   return (
     <div style={{ paddingLeft: `${level * 10}px` }} className="accordion">
-      <div id={id} className="accordion-header">
+      <div
+        onClick={() => setActive((prev) => !prev)}
+        id={id}
+        className="accordion-header"
+      >
         <strong>{name}</strong>
         <p>{message}</p>
-        {child.length > 0 && (
-          <button onClick={() => setActive((prev) => !prev)}>
-            {active ? "X" : "+"}
-          </button>
-        )}
+        {child.length > 0 && <button>{active ? "X" : "+"}</button>}
       </div>
       {active && child.map((item) => <Accordion key={item.id} data={item} />)}
     </div>
